@@ -73,6 +73,21 @@ def upload_multi_xlsx(xlsx_dir, conn, schema):
     del root, dirs, files
 
 
+## To Do
+
+def upload_single_csv():
+    pass
+
+def upload_multi_csv():
+    pass
+
+def upload_single_geojson():
+    pass
+
+def upload_multi_geojson():
+    pass
+
+
 if __name__ == '__main__':
     database_name = 'Vector'
     database_host = 'localhost'
