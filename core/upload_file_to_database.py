@@ -94,16 +94,18 @@ if __name__ == '__main__':
     database_port = '5432'
     database_username = 'postgres'
     database_password = '123456'
-    database_schema = 'Countries'
+    database_schema = 'Cities'
     database = Database(database_name, database_host, database_port, database_username, database_password)
-    shapefile_path =  r"E:\Data\Vector\China\国家边界矢量\World_countries.shp"
-    shapefile_dir = r"E:\Data\Vector\China"
-    xlsx_dir = r"E:\Data\Vector\China"
+    shapefile_path =  r"E:\Data\Vector\World_Cities\World_Cities.shp"
+    # shapefile_dir = r"E:\Data\Vector\中国省级行政区划（审图号）"
+    # xlsx_dir = r"E:\Data\Vector\China"
+    # satellite_wrs_dir = r"E:\Data\Vector\Satellite_WRS"
 
     
     if  database.conn:
         # print('Connected to database successfully!')
-        # upload_single_shapefile(shapefile_path, database.conn, database_schema)
+        upload_single_shapefile(shapefile_path, database.conn, database_schema)
         # upload_multi_shapefiles(shapefile_dir, database.conn, "China")
-        upload_multi_xlsx(xlsx_dir, database.conn, "China")
+        # upload_multi_xlsx(xlsx_dir, database.conn, "China")
+        # upload_multi_shapefiles(satellite_wrs_dir, database.conn, "Satellite_WRS")
         database.conn.close()
